@@ -22,7 +22,7 @@ color:white !important;
 export const CustomButton = styled.button`
 display: inline-block;
 border-radius: 4px;
-background-color: grey;
+background-color: #008CBA;;
 border: none;
 color: #FFFFFF;
 text-align: center;
@@ -32,9 +32,10 @@ width: 200px;
 transition: all 0.5s;
 cursor: pointer;
 margin: 40px;
-:hover {
-    background-color: #008CBA;
+:disabled {
+    background-color: grey;
     color: white;
+    cursor: no-drop;
 }
 
 `;

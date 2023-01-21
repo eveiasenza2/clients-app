@@ -37,6 +37,7 @@ const Form = () => {
                     placeholder="Nombre" 
                     className="form-control" 
                     value={nombre}
+                    required
                     onChange={(e)=>{setNombre(e.target.value)}} 
                     name="nombre"/>
                 </div>
@@ -45,26 +46,29 @@ const Form = () => {
                     placeholder="Apellido" 
                     className="form-control" 
                     value={apellido}
+                    required
                     onChange={(e)=>{setApellido(e.target.value)}} 
                     name="apellido"/>
                 </div>
                 <div>
-                 <CustomInput type="text" 
+                 <CustomInput type="number" 
                     placeholder="Edad" 
                     className="form-control" 
                     value={edad}
+                    required
                     onChange={(e)=>{setEdad(e.target.value)}} 
                     name="edad"/>
                 </div>
                 <div>
-                 <CustomInput type="text" 
+                 <CustomInput type="date" 
                     placeholder="Fecha de nacimiento" 
                     className="form-control" 
                     value={fechaNacimiento}
+                    required
                     onChange={(e)=>{setFechaNacimiento(e.target.value)}} 
                     name="fecha de nacimiento"/>
                 </div>
-                <CustomButton type="submit">Enviar</CustomButton>
+           {(nombre && fechaNacimiento && edad && apellido !== '') ? <CustomButton type="submit">Enviar</CustomButton> : <CustomButton disabled>Enviar</CustomButton>  }
             </CustomForm>
         </>
     );
