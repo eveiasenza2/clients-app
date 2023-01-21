@@ -1,17 +1,17 @@
 import React from 'react';
-import Form from '../components/form';
+import List from '../components/list';
 import TopBar from '../components/topBar';
 import Footer from '../components/footer';
 
-const Home = () => {
+const ClientList = () => {
 
   return (
     <section>
-      <TopBar />
-        <Form />
-       <Footer/>
+     <TopBar />
+        <List/>
+      <Footer/>
     </section>
   )
 }
 
-export default Home
+export default ClientList
